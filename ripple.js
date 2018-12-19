@@ -18,8 +18,8 @@ var addRippleEffect = function (e) {
   if(e.originalEvent.touches){
   touch = e.originalEvent.touches[0];
   };
-  var top = (e.pageY || touch.pageY) - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
-  var left = (e.pageX || touch.pageX) - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
+  var top = (touch.pageY || e.pageY) - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
+  var left = (touch.pageX || e.pageX || touch.pageX) - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
   ripple.style.top = top + 'px';
   ripple.style.left = left + 'px';
   ripple.classList.add('show');
