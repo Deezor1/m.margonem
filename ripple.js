@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
-//if(!('ontouchstart' in window)) window.location = 'https://deezor1.github.io/margonem/';
+if(!('ontouchstart' in window)) window.location = 'https://deezor1.github.io/margonem/';
 var addRippleEffect = function (e) {
   var target = e.target;
   if (target.tagName.toLowerCase() !== 'div') return false;
