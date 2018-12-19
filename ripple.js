@@ -1,12 +1,12 @@
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
 });
-if(!('ontouchstart' in window)) window.location = 'https://deezor1.github.io/margonem/';
-const addRippleEffect = function (e) {
-  let target = e.target;
+//if(!('ontouchstart' in window)) window.location = 'https://deezor1.github.io/margonem/';
+var addRippleEffect = function (e) {
+  var target = e.target;
   if (target.tagName.toLowerCase() !== 'div') return false;
-  let rect = target.getBoundingClientRect();
-  let ripple = target.querySelector('.ripple');
+  var rect = target.getBoundingClientRect();
+  var ripple = target.querySelector('.ripple');
   if (!ripple) {
       ripple = document.createElement('span');
       ripple.className = 'ripple';
@@ -14,12 +14,16 @@ const addRippleEffect = function (e) {
       target.appendChild(ripple);
   }
   ripple.classList.remove('show');
-  let top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
-  let left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
+  let touch = undefined;
+  if(e.originalEvent.touches){
+  touch = e.originalEvent.touches[0];
+  };
+  var top = (e.pageY || touch.pageY) - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
+  var left = (e.pageX || touch.pageX) - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
   ripple.style.top = top + 'px';
   ripple.style.left = left + 'px';
   ripple.classList.add('show');
   return false;
 }
 document.addEventListener('click', addRippleEffect, false);
-document.addEventListener('touchmove', addRippleEffect, false);
+document.addEventListener('mouseover', addRippleEffect, false);
