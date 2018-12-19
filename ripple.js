@@ -14,16 +14,11 @@ var addRippleEffect = function (e) {
       target.appendChild(ripple);
   }
   ripple.classList.remove('show');
-  let touch = undefined;
-  if(e.originalEvent.touches){
-  touch = e.originalEvent.touches[0];
-  };
-  var top = (touch.pageY || e.pageY) - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
-  var left = (touch.pageX || e.pageX || touch.pageX) - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
+  var top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
+  var left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
   ripple.style.top = top + 'px';
   ripple.style.left = left + 'px';
   ripple.classList.add('show');
   return false;
 }
 document.addEventListener('click', addRippleEffect, false);
-document.addEventListener('mouseover', addRippleEffect, false);
