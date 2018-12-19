@@ -84,6 +84,9 @@ a:hover, a:focus{
     -webkit-filter: none !important;
     -moz-filter: none !important;
   }
+  .dealer:focus, .author:focus, .jakub:focus, .julia:focus, .bernadetta:focus, .oliwia:focus, .hero:focus{
+    background-color: rgba(0, 0, 0, 0.15);
+  }
   .tooltip{
     display: none;
   }
