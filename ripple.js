@@ -14,8 +14,8 @@ var addRippleEffect = function (e) {
       target.appendChild(ripple);
   }
   ripple.classList.remove('show');
-  var top = e.originalEvent.touches[0].pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
-  var left = e.originalEvent.touches[0].pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
+  var top = e.touches[0].pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
+  var left = e.touches[0].pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
   ripple.style.top = top + 'px';
   ripple.style.left = left + 'px';
   ripple.classList.add('show');
