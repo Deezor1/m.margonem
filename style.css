@@ -79,7 +79,7 @@ a:hover, a:focus{
     display: none !important;
   }
   .dealer:hover, .author:hover, .jakub:hover, .julia:hover, .bernadetta:hover, .oliwia:hover, .hero:hover{
-    background-color: inherit;
+    background-color: rgba(0, 0, 0, 0.15);
     filter: none !important;
     -webkit-filter: none !important;
     -moz-filter: none !important;
