@@ -79,13 +79,10 @@ a:hover, a:focus{
     display: none !important;
   }
   .dealer:hover, .author:hover, .jakub:hover, .julia:hover, .bernadetta:hover, .oliwia:hover, .hero:hover{
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: inherit;
     filter: none !important;
     -webkit-filter: none !important;
     -moz-filter: none !important;
-  }
-  .dealer:focus, .author:focus, .jakub:focus, .julia:focus, .bernadetta:focus, .oliwia:focus, .hero:focus{
-    background-color: transparent;
   }
   .tooltip{
     display: none;
