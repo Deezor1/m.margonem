@@ -21,4 +21,4 @@ var addRippleEffect = function (e) {
   ripple.classList.add('show');
   return false;
 }
-document.addEventListener('click', addRippleEffect, false);
+document.addEventListener('touchstart', addRippleEffect, false);
