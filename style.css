@@ -3,6 +3,10 @@ body{
   color: white !important;
   text-align: center;
 }
+.event-finished{
+  font-size: 100px;
+  color: red;
+}
 a{
   position: relative;
   text-decoration: none !important;
